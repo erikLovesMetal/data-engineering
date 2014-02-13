@@ -1,0 +1,24 @@
+<% if !@parse.errors.empty? %>
+  <div class="alert alert-error">
+    <ul>
+      <% @parse.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if flash[:error] %>
+    <div class="alert-message alert-message-danger">
+      <h4>Error</h4>
+        <p>
+          <strong><%= flash[:error] %></strong>
+        </p>
+    </div>
+<% end %>
+<div class="well">
+  <%= form_for @parse, html: { multipart: true } do |f| %>
+    <%= f.file_field :file %>
+    <br />
+    <%= f.submit "Parse", class: "btn btn-primary" %>
+  <% end %>
+</div>

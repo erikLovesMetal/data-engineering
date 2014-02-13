@@ -1,0 +1,27 @@
+<h1>Listing parses</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+ <div class="well">
+   <h3>File gross amount:</h3> <%= @gross.inspect %>
+ </div>
+  <tbody>
+    <% @parses.each do |parse| %>
+      <tr>
+        <td><%= parse.name %></td>
+        <td><%= link_to 'Show', parse %></td>
+        <td><%= link_to 'Destroy', parse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parse', new_parse_path %>
