@@ -14752,3 +14752,106 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-12 21:42:57 
 
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 21:42:57 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParsesController#new as HTML
+  Rendered parses/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 209ms (Views: 180.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/parses.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/parses.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:05 -0800
+
+
+Started POST "/parses" for 127.0.0.1 at 2014-02-12 22:03:14 -0800
+Processing by ParsesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q9xbc3QH9UKjzQ90j6XQr76BIFDL38u8MBvUhKqrnEk=", "parse"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007f8edfc43db0 @tempfile=#<Tempfile:/var/folders/6k/v4kkvwmd3b56xk2n6xr_3gnw0000gn/T/RackMultipart20140212-28301-1em7kr8>, @original_filename="example_input.tab", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"parse[file]\"; filename=\"example_input.tab\"\r\nContent-Type: application/octet-stream\r\n">}, "commit"=>"Parse"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "parses" ("created_at", "file", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00], ["file", "example_input.tab"], ["name", "example_input.tab"], ["updated_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("count", "created_at", "item_description", "merchant_address", "merchant_name", "price", "purchaser_name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["count", 2], ["created_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00], ["item_description", "$10 off $20 of food"], ["merchant_address", "987 Fake St"], ["merchant_name", "Bob's Pizza"], ["price", 10], ["purchaser_name", "Snake Plissken"], ["updated_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("count", "created_at", "item_description", "merchant_address", "merchant_name", "price", "purchaser_name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["count", 5], ["created_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00], ["item_description", "$30 of awesome for $10"], ["merchant_address", "456 Unreal Rd"], ["merchant_name", "Tom's Awesome Shop"], ["price", 10], ["purchaser_name", "Amy Pond"], ["updated_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("count", "created_at", "item_description", "merchant_address", "merchant_name", "price", "purchaser_name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["count", 1], ["created_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00], ["item_description", "$20 Sneakers for $5"], ["merchant_address", "123 Fake St"], ["merchant_name", "Sneaker Store Emporium"], ["price", 5], ["purchaser_name", "Marty McFly"], ["updated_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("count", "created_at", "item_description", "merchant_address", "merchant_name", "price", "purchaser_name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["count", 4], ["created_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00], ["item_description", "$20 Sneakers for $5"], ["merchant_address", "123 Fake St"], ["merchant_name", "Sneaker Store Emporium"], ["price", 5], ["purchaser_name", "Snake Plissken"], ["updated_at", Thu, 13 Feb 2014 06:03:14 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  Rendered parses/complete.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 113ms (Views: 6.6ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:14 -0800
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:14 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/parses.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/parses.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-12 22:03:15 -0800
